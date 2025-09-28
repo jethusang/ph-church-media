@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kimberley Potters House Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" type="module" defer></script>
+    <style>
+      .cus-text {
+        font-family: "Orbitron", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lightbox">
+      <div class="wrapper">
+        <header>
+          <div class="photographer">
+            <i class="uil uil-camera"></i>
+            <span></span>
+          </div>
+          <div class="buttons">
+            <i class="uil uil-import" data-img-url="" data-file-name=""></i>
+            <i class="close-icon uil uil-times"></i>
+          </div>
+        </header>
+        <div class="preview-img">
+          <div class="img"><img src="" alt="preview-img" /></div>
+        </div>
+      </div>
+    </div>
+    <section class="search">
+      <img src="./images/event-media-header.jpg" alt="search-img" />
+      <div class="content"></div>
+    </section>
+    <section class="gallery">
+      <ul class="images"></ul>
+      <button class="load-more cus-text">Load More</button>
+    </section>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const headerImg = document.querySelector(".search img");
+
+      if (window.innerWidth <= 768) {
+        headerImg.src = "./images/mobile-phone-header.jpg";
+      } else {
+        e;
+        headerImg.src = "./images/event-media-header.jpg";
+      }
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 768) {
+          headerImg.src = "./images/mobile-phone-header.jpg";
+        } else {
+          headerImg.src = "./images/event-media-header.jpg";
+        }
+      });
+    });
+  </script>
+</html>
